@@ -8,7 +8,7 @@ export type Deployment = {
     Id: string; 
     ReleaseId: string; 
     EnvironmentId: string; 
-    DeployedAt: Date; 
+    DeployedAt: string; 
 }
 
 export type Environment = {
@@ -25,7 +25,7 @@ export type Release = {
     Id: string; 
     ProjectId: string; 
     Version: string; 
-    Created: Date; 
+    Created: string; 
 }
 
 
@@ -34,12 +34,7 @@ export async function fetchDeployments() : Promise<Array<Deployment>> {
 
     // Ordinarily, we would/could validate that that the data really is the right shape, and throw an error if it isn't. 
     // For the purposes of this exercise, we'll just assume that the data is in the correct shape.
-    return deployments.map(v => {
-        return {
-            ...v, 
-            DeployedAt: new Date(v.DeployedAt)
-        }
-    }) as Array<Deployment>; 
+    return deployments as Array<Deployment>; 
 }
 
 export async function fetchEnvironments() : Promise<Array<Environment>> {
@@ -52,10 +47,5 @@ export async function fetchProjects() : Promise<Array<Project>> {
 
 export async function fetchReleases() : Promise<Array<Release>> {
 
-    return releases.map((v) => {
-        return {
-            ...v, 
-            Created: new Date(v.Created)
-        }; 
-    }) as Array<Release>; 
+    return releases  as Array<Release>; 
 }
