@@ -1,0 +1,20 @@
+{
+  "name": "octopus-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dwjohnston/octopus-test.git",
+  "author": "David Johnston <david@blacksheepcode.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.1",
+    "babel-jest": "^27.1.1",
+    "jest": "^27.1.1",
+    "typescript": "^4.4.3"
+  }, 
+  "scripts": {
+    "test": "jest"
+  }
+}
