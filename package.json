@@ -16,5 +16,9 @@
   }, 
   "scripts": {
     "test": "jest"
-  }
+  }, 
+  "engines": {
+    "node": "14"
+  }, 
+  "engineStrict": true
 }
