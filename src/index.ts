@@ -12,6 +12,8 @@ export type AbridgedReleaseData = {
         release: Release;
         keepReason: string;
     }>;
+
+    
 }
 
 //TODO can you think of a better name for this type

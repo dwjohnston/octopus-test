@@ -4,6 +4,7 @@ import projects from "./data/projects.json";
 import releases from "./data/releases.json"; 
 
 
+
 export type Deployment = {
     Id: string; 
     ReleaseId: string; 
@@ -27,6 +28,11 @@ export type Release = {
     Version: string; 
     Created: string; 
 }
+
+
+/**
+ * Turns out all of this isn't necessary - the the tests don't use it. 
+ */
 
 
 // Asynchronous isn't necessary here, but in a 'real world' scenario, we would likely be getting the data via an API call or something 

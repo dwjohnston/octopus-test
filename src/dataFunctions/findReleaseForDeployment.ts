@@ -7,7 +7,7 @@ export function findReleaseForDeployment(deployment: Deployment, releases: Array
 
     // Defensive programming
     if (foundReleases.length ===0) {
-        throw new GeneralError("Something has gone wrong, release found for deployment ", deployment); 
+        throw new GeneralError("Something has gone wrong, no release found for deployment ", deployment); 
     }
 
     if (foundReleases.length >1) {

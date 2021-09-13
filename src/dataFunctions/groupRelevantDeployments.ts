@@ -5,6 +5,7 @@ import { findUniqueProjectEnvironmentPairs, ProjectEnvironmentPair } from './fin
 export type GroupedRelevantDeployments = Record<string, Array<ReleaseTableRow>>;
 
 export function createProjectEnvironmentPairKey (data: ReleaseTableRow) : string {
+    // This implementation of a 'unique pair key' is possibly not guaranteed non-unique, if `/` was a valid project/environment id character. 
     // You would possibly want to defensively check that projectId, environmentId didn't contain any bad characters here
     // But you could have done that earlier anyway.
     return `${data.projectId}/${data.environmentId}`; 
